@@ -1,10 +1,6 @@
 # Limpio Perú
 
-Aplicación web para registrar y gestionar reportes ambientales. Incluye tres perfiles con permisos independientes:
-
-- **Ciudadano:** registra y consulta sus reportes.
-- **Operador:** consulta todos los reportes y actualiza su estado.
-- **Administrador:** gestiona reportes, usuarios y roles.
+Aplicación web para registrar y gestionar reportes ambientales con perfiles de Ciudadano, Operador y Administrador.
 
 ## Estructura
 
@@ -19,7 +15,7 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-Crea `.env` a partir de `.env.example` y configura `DATABASE_URL`, `SECRET_KEY` y `CORS_ORIGINS`. Después inicia la API:
+Configura `DATABASE_URL`, `SECRET_KEY` y `CORS_ORIGINS` como variables de entorno. Para desarrollo local puedes definirlas en un archivo `.env` no versionado.
 
 ```bash
 uvicorn App.main:app --reload
