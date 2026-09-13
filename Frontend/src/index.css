@@ -1,0 +1,25 @@
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #17231c;
+  background: #f3f6f2;
+  font-synthesis: none;
+  letter-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  letter-spacing: 0;
+}
+button {
+  cursor: pointer;
+}
