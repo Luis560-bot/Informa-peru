@@ -32,11 +32,11 @@ export function ReportForm({ token, refresh }) {
     <form className="report-form" onSubmit={submit}>
       <div className="section-title"><div><p className="kicker">Nuevo caso</p><h2>Reportar un problema</h2></div><Plus aria-hidden="true" /></div>
       <div className="form-grid">
-        <label>Título<input name="title" value={form.title} onChange={updateField} placeholder="Ej. Residuos junto al parque" required /></label>
+        <label>Título<input name="title" value={form.title} onChange={updateField} placeholder="Ej. Residuos junto al parque" minLength="5" maxLength="120" required /></label>
         <label>Tipo<select name="category" value={form.category} onChange={updateField}><option>Residuos</option><option>Reciclaje</option><option>Desmonte</option><option>Areas verdes</option></select></label>
-        <label>Distrito<input name="district" value={form.district} onChange={updateField} required /></label>
-        <label>Dirección<input name="address" value={form.address} onChange={updateField} required /></label>
-        <label className="wide">Descripción<textarea name="description" value={form.description} onChange={updateField} rows="4" required /></label>
+        <label>Distrito<input name="district" value={form.district} onChange={updateField} minLength="2" maxLength="100" required /></label>
+        <label>Dirección<input name="address" value={form.address} onChange={updateField} minLength="5" maxLength="200" required /></label>
+        <label className="wide">Descripción<textarea name="description" value={form.description} onChange={updateField} rows="4" minLength="10" maxLength="2000" required /></label>
       </div>
       {message && <p className="feedback" aria-live="polite">{message}</p>}
       <button className="primary" disabled={busy}>{busy ? "Enviando…" : "Enviar reporte"}</button>
